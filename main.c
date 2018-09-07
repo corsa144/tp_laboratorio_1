@@ -1,109 +1,66 @@
     #include<stdio.h>
     #include<stdlib.h>
-
-    int menu();
-    float pedir_numero();
+    #include"calculadora.h"
 
     int main(){
         int opcion;
-        float op1,op2;
-        int fact=1;
-
+        int sumar,restar,multiplicar,dividir,numeroUno=0,numeroDos=0;
+        int facUno,facDos;
 
         do{
 
                 system("cls");
-                opcion=menu();
+                printf("Menu:\n1-Ingrese primer numero:%d",numeroUno);
+
+                printf("\n2-Ingrese segundo numero:%d",numeroDos);
+
+                printf("\n3-Hacer las operaciones:");
+                printf("\n4-Mostrar resultados:");
+                printf("\n5-Salir:\n");
+
+                scanf("%d",&opcion);
 
                 switch(opcion){
                     case 1:
-                        op1= pedir_numero();
-                        op2= pedir_numero();
-
-                        printf("Resultado: %.2f\n",op1+op2);
-                        system("pause");
+                        printf("Ingrese numero: " );
+                        scanf("%d",&numeroUno);
                         break;
                     case 2:
-                        op1= pedir_numero();
-                        op2= pedir_numero();
-
-                        printf("Resultado: %.2f\n",op1-op2);
-                        system("pause");
-
+                        printf("ingrese numero 2: ");
+                        scanf("%d",&numeroDos);
                         break;
                     case 3:
-                        op1= pedir_numero();
-                        op2= pedir_numero();
 
-                        printf("Resultado: %.2f\n",op1*op2);
+                        sumar=suma(numeroUno,numeroDos);
+
+                        restar=resta(numeroUno,numeroDos);
+
+                        multiplicar=multiplicacion(numeroUno,numeroDos);
+
+                        dividir=division(numeroUno,numeroDos);
+
+                        facUno=factorial(numeroUno);
+                        facDos=factorialDos(numeroDos);
                         system("pause");
+
                         break;
                     case 4:
-                        op1= pedir_numero();
-                        op2= pedir_numero();
-
-                        if (op2==0)
-                        {
-                            printf("Error");
-                        }
-                        else
-                        {
-                            printf("Resultado: %.2f\n",op1/op2);
-                        }
+                        printf("El resultado de A+B es: %d\n",sumar);
+                        printf("El resultado de A-B es: %d\n",restar);
+                        printf("El resultado de A*B es: %d\n",multiplicar);
+                        printf("El resultado de A/B es: %d\n",dividir);
+                        printf("El resultado del factorial A es: %d",facUno);
+                        printf("El resultado del factorial B es: %d",facDos);
                         system("pause");
                         break;
                     case 5:
-                        fact=1;
-                        op1=(int) pedir_numero();
 
-                        if (op1<0)
-                        {
-                            fact=0;
-                        }
-                        else if (op1==0)
-                        {
-                            fact=1;
-                        }
-                        else
-                        {
-                            for (int contador=1;contador<=op1;contador++)
-                            {
-                                fact=fact*contador;
-                            }
-                        }
-                        printf("Resultado: %d\n",fact);
-                        system("pause");
                         break;
-
-                    case 6:
-                        break;
-
 
                 }
-        }while(opcion!=6);
+        }while(opcion!=5);
         return 0;
 
-
-
-
-
-
-
     }
-    int menu()
-    {//3 menu
-        int opcion;
-        printf("Menu:\n1-Suma\n2-Resta\n3-Multiplicacion\n4-Division\n5-Factorial\n6-Salir\nSeleccione una operacion:\n");
-        scanf("%d",&opcion);
 
-        return opcion;
 
-    }
-    float pedir_numero()
-    {
-        float numero;
-        printf("Ingrese numero: " );
-
-        scanf("%f",&numero);
-        return numero;
-    }
