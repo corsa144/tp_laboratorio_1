@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
 1554412842 source:c:\users\sidea\documents\calculadora\calculadora.c
 
-1554413478 source:c:\users\sidea\documents\calculadora\main.c
+1567375523 source:c:\users\sidea\documents\calculadora\main.c
 	<stdio.h>
 	<stdlib.h>
 	"calculadora.h"
 
-1554152034 c:\users\sidea\documents\calculadora\calculadora.h
+1567375547 c:\users\sidea\documents\calculadora\calculadora.h
 

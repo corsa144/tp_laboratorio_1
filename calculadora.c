@@ -1,3 +1,6 @@
+    #include<stdio.h>
+    #include<stdlib.h>
+
 /**
 *\brief Suma dos numeros ingresados
 *\param Recibe dos variables del tipo flotantes
@@ -71,4 +74,28 @@
             resp=resp*i;
         }
         return resp;
+    }
+
+/**
+*\brief muestra un menu de opciones
+*\param operando A
+*\param operando B
+*\return retorna la opcion elegida
+*
+*/
+
+    int menu( float numeroUno, float numeroDos)
+    {
+        int opcion;
+        system("cls");
+        printf("Menu:\n1-Ingrese primer numero:%g",numeroUno);
+
+        printf("\n2-Ingrese segundo numero:%g",numeroDos);
+
+        printf("\n3-Hacer las operaciones:");
+        printf("\n4-Mostrar resultados:");
+        printf("\n5-Salir:\n");
+
+        scanf("%d",&opcion);
+        return opcion;
     }

@@ -8,18 +8,7 @@
         long int facUno;
 
         do{
-
-                system("cls");
-                printf("Menu:\n1-Ingrese primer numero:%g",numeroUno);
-
-                printf("\n2-Ingrese segundo numero:%g",numeroDos);
-
-                printf("\n3-Hacer las operaciones:");
-                printf("\n4-Mostrar resultados:");
-                printf("\n5-Salir:\n");
-
-                scanf("%d",&opcion);
-
+                opcion = menu(numeroUno,numeroDos);
                 switch(opcion){
                     case 1:
                         printf("Ingrese numero: " );

@@ -7,5 +7,6 @@
     float multiplicacion(float op1,float op2);
     float division(float op1,float op2);
     long int factorial(long int op1);
+    int menu (float numeroUno, float numeroDos);
 
 #endif // CALCULADORA_H_INCLUDED
